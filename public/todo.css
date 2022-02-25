@@ -1,0 +1,8 @@
+body{
+    background: rgb(111, 148, 57);
+    color: white;
+}
+.listData{
+    display: flex;
+    justify-content: space-evenly;
+}
