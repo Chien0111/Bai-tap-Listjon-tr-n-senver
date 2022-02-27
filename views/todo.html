@@ -11,34 +11,36 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/public/todo.css" />
   </head>
   <body>
-    <h1>TodoList</h1>
-
-    <!-- Button trigger modal -->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      ADD NEW JOB
-    </button>
+    <div class="header">
+      <h1>TODOLIST</h1>
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        ADD NEW JOB
+      </button>
+    </div>
 
     <div class="listData">
-        <div>
-            <h2>Todo</h2>
-            <table class="todo"></table>
-        </div>
-        <div>
-            <h2>Doing</h2>
-            <table class="doing"></table>
-        </div>
-        <div>
-            <h2>Done</h2>
-            <table class="done"></table>
-        </div>
+      <div class="bang">
+        <h2>TODO</h2>
+        <table id="todo">
+        </table>
+      </div>
+      <div class="bang">
+        <h2>DOING</h2>
+        <table id="doing"></table>
+      </div>
+      <div class="bang">
+        <h2>DONE</h2>
+        <table id="done"></table>
+      </div>
     </div>
 
     <!-- Modal -->
@@ -52,13 +54,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <h3 class="modal-title" id="exampleModalLabel">ADD NEW JON</h3>
           </div>
           <div class="modal-body">
             <input type="text" name="" id="name" placeholder="name" /> <br />
@@ -79,7 +75,48 @@
               Close
             </button>
             <button type="button" class="btn btn-primary" id="add">
-              Save changes
+              ADD
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="staticBackdropLabel">UPDATE</h3>
+          </div>
+          <div class="modal-body">
+            <input type="text" name="" id="nameup" placeholder="name" /> <br />
+            <input type="date" name="" id="deadlineup" />
+            <select name="" id="statusup">
+              <option value="todo">todo</option>
+              <option value="doing">doing</option>
+              <option value="done">done</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              id="tat"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" id="up">
+              UPDATE
             </button>
           </div>
         </div>
