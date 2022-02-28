@@ -23,8 +23,6 @@ $("#add").on("click", function () {
     .catch((err) => console.log(err));
 });
 
-render();
-
 function render() {
   $.ajax({
     url: "/todo",
@@ -82,6 +80,7 @@ function out(item) {
 }
 
 function update(item) {
+  $("#up").off("click")
   $("#up").on("click", function () {
     const nameup = $("#nameup").val();
     const deadlineup = $("#deadlineup").val();
@@ -108,3 +107,5 @@ function update(item) {
       .catch((err) => console.log(err));
   });
 }
+
+render();
